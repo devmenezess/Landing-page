@@ -119,7 +119,7 @@
 .about-description{
     h2{
         font-size: 38px;
-        margin-bottom: 24px;
+        margin-bottom: 28px;
     }
 
     p{
@@ -148,7 +148,11 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 38px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+}
+
+.services h2 {
+    margin-bottom: 20px; /* Ajuste a margem inferior conforme necessário */
 }
 
 .services-content p{
@@ -159,11 +163,15 @@
 }
 
 .haircuts{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
     gap: 16px;
     padding: 0 44px 34px 44px;
+    z-index: 99;
+    margin-bottom: -20px;
 }
 
 .haircut{
@@ -207,12 +215,13 @@
 }
 
 @media screen and (max-width: 768px) {
-    .haircuts{
-        flex-direction: column;
+    .haircuts {
+        grid-template-columns: 1fr; /* Defina uma única coluna para dispositivos menores que 768px */
+        padding: 0 14px; /* Ajuste o preenchimento conforme necessário */
     }
 
-    .haircut img{
-        max-width: 740px;
+    .haircut img {
+        max-width: 100%; /* Garanta que as imagens ocupem 100% da largura da coluna */
     }
 }
 
@@ -228,7 +237,7 @@
 
 .footer-icons{
     display: flex;
-    gap: 8px;
+    gap: 20px;
     color: $white-normal;
 }
 
